@@ -1,9 +1,17 @@
+import '../styles/style.css';
+
 import Timer from './timer.js';
 
 const pomodoroButton = document.getElementById('pomodoro');
 const shortBreakButton = document.getElementById('short-break');
 const longBreakButton = document.getElementById('long-break');
 const timerButton = document.getElementById('timer-btn');
+
+/* 
+pomodoro = 25 * 60
+shortBreak = 5 * 60
+longBreak = 15 * 60
+*/
 
 const pomodoro = new Timer(25*60);
 const shortBreak = new Timer(5*60);
@@ -13,7 +21,7 @@ let currentTimer = pomodoro;
 
 function stopCurrentTimer(){
   if(currentTimer){
-    currentTimer.pause(); 
+    currentTimer.reset(); 
   }
 }
 
@@ -46,12 +54,10 @@ longBreakButton.addEventListener('click', () => {
   switchTimer(longBreak);
 });
 
-// Agregar evento al botón de timer
 timerButton.addEventListener('click', () => {
   currentTimer.toggleStartPause();
   updateTimerButtonText();
 });
 
-// Inicialización
 pomodoro.showTime();
 updateTimerButtonText();
