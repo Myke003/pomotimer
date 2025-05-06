@@ -13,7 +13,7 @@ shortBreak = 5 * 60
 longBreak = 15 * 60
 */
 
-const pomodoro = new Timer(25*60);
+const pomodoro = new Timer(10);
 const shortBreak = new Timer(5*60);
 const longBreak = new Timer(15*60);
 
