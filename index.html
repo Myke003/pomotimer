@@ -12,16 +12,16 @@
     <div id="app" class="min-h-screen flex flex-col items-center font-poppins pomodoro text-stone-50 text-shadow-stone-600">
       <header class="flex w-screen h-20 p-4 justify-between items-center text-white">
         <h1 class="text-2xl font-bold cursor-pointer">PomoTimer</h1>
-        <button class="cursor-pointer text-2xl">
-          <i class="bi bi-gear-fill"></i>
+        <button class="text-2xl">
+         <!-- <i class="bi bi-gear-fill"></i>-->
         </button>
       </header>
 
       <div class="pomodoro-container flex flex-col items-center justify-center pt-10 w-min md:w-auto text-2xl font-poppins">
-        <div class="pomo-options flex justify-around w-screen md:w-2xl pb-20">
-          <button id="pomodoro" class="cursor-pointe">Timer</button>
-          <button id="short-break" class="cursor-pointer">Break</button>
-          <button id="long-break" class="cursor-pointer">Long Break</button>
+        <div class="pomo-options flex justify-center w-screen space-x-4 pb-20">
+          <button id="pomodoro" class="pomo-btn">Timer</button>
+          <button id="short-break" class="pomo-btn">Break</button>
+          <button id="long-break" class="pomo-btn">Long Break</button>
         </div>
 
         <div class="flex text text-9xl pb-20">
@@ -29,7 +29,7 @@
         </div>
 
         <div class="timer-btn-container flex pb-12">
-          <button id="timer-btn" class="btn-timer-pomo">Start</button>
+          <button id="timer-btn" class="btn-timer-pomo pomo-btn">Start</button>
         </div>
       </div>
       <footer class="flex mt-auto w-full justify-between p-4">
@@ -39,13 +39,12 @@
           <a href="https://github.com/Myke003" target="_blank">
             <i class="bi bi-github"></i>
           </a>
-          <a href="www.linkedin.com/in/miguellozano21" target="_blank">
+          <a href="https://www.linkedin.com/in/miguellozano21" target="_blank">
             <i class="bi bi-linkedin"></i>
           </a>
         </div>
       </footer>
     </div>
-
     
     <script type="module" src="src/js/app.js"></script>
     <script src="src/js/themes.js"></script>
