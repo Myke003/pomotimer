@@ -14,7 +14,7 @@ class Timer {
     this.ring = new Audio('timer-done.mp3');
 
     this.ring.addEventListener('error', () => {
-      console.log("Error al cargar el archivo de audio");
+     // console.log("Error al cargar el archivo de audio");
     });
 
     this.showTime();
@@ -27,12 +27,12 @@ class Timer {
     this.time = this.initialTime;
     this.isPaused = false;
     this.showTime();
-    console.log("Timer reset.");
+    //console.log("Timer reset.");
   }
 
   start() {
     if (this.isRunning) {
-      console.log("Esta corriendo actualmente");
+      //console.log("Esta corriendo actualmente");
       return;
     }
 
@@ -48,7 +48,7 @@ class Timer {
       }
     }, 1000);
 
-    console.log("Is started.");
+    //console.log("Is started.");
   }
 
   pause() {
@@ -58,14 +58,14 @@ class Timer {
     this.isRunning = false;
     this.isPaused = true;
 
-    console.log("Is paused.");
+   // console.log("Is paused.");
   }
 
   finish() {
     this.pause();
     this.isPaused = false;
     this.time = this.initialTime;
-    console.log("Is finished.");
+    //console.log("Is finished.");
   }
 
   showTime() {
