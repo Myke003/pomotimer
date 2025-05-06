@@ -163,7 +163,7 @@ class Timer {
     const seconds = this.time % 60;
 
     // Actualiza el contenido del elemento HTML con el tiempo formateado.
-    this.clock.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+    this.clock.textContent = `${minutes < 10 ? '0'+ minutes: minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
   }
 
   /**
