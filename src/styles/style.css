@@ -11,3 +11,17 @@ font-family: 'Poppins', sans-serif;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.pomo-btn {
+  border: white 2px solid;
+  width: 150px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 300ms;
+  font-size: bold;
+}
+
+.pomo-btn:hover, .pomo-btn:focus{
+  background-color: white;
+  color: black;
+}
