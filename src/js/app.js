@@ -41,23 +41,29 @@ function switchTimer(timer){
 
 }
 
-pomodoroButton.addEventListener('click', () => {
-  switchTimer(pomodoro);
-  console.log("pomodoro")
-});
-
-shortBreakButton.addEventListener('click', () => {
-  switchTimer(shortBreak);
-});
-
-longBreakButton.addEventListener('click', () => {
-  switchTimer(longBreak);
-});
+function switchButton(pomoButton) {
+  const buttons = document.querySelectorAll('.pomo-btn');
+  buttons.forEach(btn => btn.classList.remove('pomo-btn-active'));
+  pomoButton.classList.add('pomo-btn-active');
+}
 
 timerButton.addEventListener('click', () => {
   currentTimer.toggleStartPause();
   updateTimerButtonText();
 });
+
+const timerMap = [
+  {button: pomodoroButton, timer: pomodoro},
+  {button: shortBreakButton, timer: shortBreak},
+  {button: longBreakButton, timer: longBreak}
+];
+
+timerMap.forEach(({button, timer})=>{
+  button.addEventListener('click', ()=>{
+    switchTimer(timer);
+    switchButton(button);
+  });
+})
 
 pomodoro.showTime();
 updateTimerButtonText();
